@@ -1,0 +1,49 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Home header {
+  display: flex;
+  justify-content: center;
+  font-size: 3.75rem;
+  margin: 30px 0;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+  background-color: white;
+  width: 80%;
+}
+
+.Home header svg {
+  transform: rotate(-20deg);
+  color: #1CD4C3;
+}
+
+.Home header span {
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  color: #3ee5d6;
+  margin-left: 15px;
+}
+
+.Home .create {
+  background-color: #e53e4d;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.Home .create:hover {
+  background-color: #d41c2d;
+}
