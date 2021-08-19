@@ -1,11 +1,18 @@
 import axios from "axios";
 
-const postUrl: string = "http://192.168.0.7:5000/posts";
-const loginUrl: string = "http://192.168.0.7:5000/auth/login";
-const verifyUrl: string = "http://192.168.0.7:5000/auth/verify";
+const baseUrl: string = "http://192.168.0.222:5000";
+const postUrl: string = "http://192.168.0.222:5000/posts";
+const loginUrl: string = "http://192.168.0.222:5000/auth/login";
+const verifyUrl: string = "http://192.168.0.222:5000/auth/verify";
 
 export const login = (id: string, password: string) =>
   axios.post(loginUrl, { email: id, password: password });
+export const createUser = (email: string, username: string, password: string) =>
+  axios.post(`${baseUrl}/user/signup`, {
+    email: email,
+    username: username,
+    password: password,
+  });
 export const verifyToken = (token: string) =>
   axios.get(verifyUrl, { headers: { Authorization: `Bearer ${token}` } });
 

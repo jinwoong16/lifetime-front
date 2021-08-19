@@ -9,6 +9,19 @@ export const login = async (id: string, password: string) => {
   }
 };
 
+export const createUser = async (
+  email: string,
+  username: string,
+  password: string
+) => {
+  try {
+    const { data } = await api.createUser(email, username, password);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const verifyToken = async (token: string) => {
   try {
     const { data } = await api.verifyToken(token);
