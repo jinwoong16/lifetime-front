@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseUrl: string = "https://lifetime01.herokuapp.com/";
-const postUrl: string = "https://lifetime01.herokuapp.com//posts";
-const loginUrl: string = "https://lifetime01.herokuapp.com//auth/login";
-const verifyUrl: string = "https://lifetime01.herokuapp.com//auth/verify";
+const baseUrl: string = "https://lifetime01.herokuapp.com";
+const postUrl: string = "https://lifetime01.herokuapp.com/posts";
+const loginUrl: string = "https://lifetime01.herokuapp.com/auth/login";
+const verifyUrl: string = "https://lifetime01.herokuapp.com/auth/verify";
 
 export const login = (id: string, password: string) =>
   axios.post(loginUrl, { email: id, password: password });
